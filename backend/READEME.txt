@@ -1,0 +1,36 @@
+Rota / Recurso
+
+Métodos HTTP
+
+GET     : Busca um Recurso no back-end
+POST    : Salva um Recurso no back-end
+PUT     : Atualiza um Recurso no back-end
+DELETE  : Deleta um Recurso no back-end
+
+
+Tipos de Parâmetros :
+
+Query Params : Parêmetros nomeados enviados na rota após "?" (Filtros, Paginação)
+Route Params : Parâmetros utilizados para identificar recursos
+Request Body : Corpo da requisição, utilizado para criar ou alterar recursos.
+
+
+Banco de Dados :
+
+SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+NoSQL: MongoDB, CouchDB, etc...
+
+Estaremos utilizando o banco de dados, SQLite.
+
+Para comunicação com esse banco de dados, estaremos utilizando o Knex
+npm install knex --save : Instala o knex
+npm install sqlite3
+npx knex init : Cria um arquivo knexfile.js (Onde ficaram a configuração do banco de dados.)
+npx knex migrate:make create_ongs (Cria uma migration de ongs.)
+npx knex migrate:latest (Execulta a migration e cria o banco de dados e a tabela)
+npx knex migrate:rollback (Reverte a última migra Execulta.)
+npx knex migrate:rollback (Reverte todas as migrates executadas.)
+npx knex migrate:status (Lista todas as migrations que foram executadas.)
+
+
+npm install cors (Para trabalhar com seguraça, quem pode acessar a aplicação)
