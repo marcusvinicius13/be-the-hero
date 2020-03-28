@@ -25,12 +25,24 @@ Estaremos utilizando o banco de dados, SQLite.
 Para comunicação com esse banco de dados, estaremos utilizando o Knex
 npm install knex --save : Instala o knex
 npm install sqlite3
+npm install cors (Para trabalhar com seguraça, quem pode acessar a aplicação)
+npm install celebrate (Validação de dados)
+npm install cross-env    (Trabalhar com os testes)
+
+npm install jest      -D (Frame work para trabalhar com testes)
+npm install supertest -D (Fazer requisições HTTP, para os testes).
+
 npx knex init : Cria um arquivo knexfile.js (Onde ficaram a configuração do banco de dados.)
 npx knex migrate:make create_ongs (Cria uma migration de ongs.)
 npx knex migrate:latest (Execulta a migration e cria o banco de dados e a tabela)
 npx knex migrate:rollback (Reverte a última migra Execulta.)
 npx knex migrate:rollback (Reverte todas as migrates executadas.)
 npx knex migrate:status (Lista todas as migrations que foram executadas.)
+npx jest --init (Cria um arquivo de configuração para os testes :
+  √ Would you like to use Jest when running "test" script in "package.json"? ... yes
+  √ Choose the test environment that will be used for testing » node
+  √ Do you want Jest to add coverage reports? ... no
+  √ Automatically clear mock calls and instances between every test? ... yes
+)
 
 
-npm install cors (Para trabalhar com seguraça, quem pode acessar a aplicação)
